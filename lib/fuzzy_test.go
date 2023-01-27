@@ -148,3 +148,23 @@ func TestFiveTo(t *testing.T) {
 	testFuzzyTimeMatches(t, 0, 56, "^five to", nil)
 	testFuzzyTimeMatches(t, 0, 57, "^five to", nil)
 }
+
+func TestInvalidInput(t *testing.T) {
+	result, negativeHourErr := SayTime(-1, 0)
+	if negativeHourErr == nil {
+		t.Fatalf("SayTime(-1, 0) = %q, %v, expected %#q, error", result, negativeHourErr, "")
+	}
+	result, negativeMinErr := SayTime(0, -1)
+	if negativeMinErr == nil {
+		t.Fatalf("SayTime(0, -1) = %q, %v, expected %#q, error", result, negativeMinErr, "")
+	}
+
+	result, outOfBoundsHourErr := SayTime(24, 0)
+	if outOfBoundsHourErr == nil {
+		t.Fatalf("SayTime(24, 0) = %q, %v, expected %#q, error", result, outOfBoundsHourErr, "")
+	}
+	result, outOfBoundsMinErr := SayTime(0, 60)
+	if outOfBoundsMinErr == nil {
+		t.Fatalf("SayTime(0, 60) = %q, %v, expected %#q, error", result, outOfBoundsMinErr, "")
+	}
+}
