@@ -1,14 +1,18 @@
 # fuzzy clock
 
 ```console
-$ fuzzy 6 10
-ten past six
-$ fuzzy 6 3
-five past six
-$ fuzzy 22 52
-ten to eleven
-$ fuzzy 20 7
-five past eight
-$ fuzzy 8 11
-ten past eight
+$ fuzzy 22 40
+twenty to eleven
+$ fuzzy 1 27
+twenty five past one
+$ fuzzy 15 53
+five to four
+$ fuzzy 2 32
+half past past two
+$ fuzzy 5 19
+twenty past five
+$ fuzzy 16 58
+five o'clock
+$ fuzzy 21 24
+twenty five past nine
 ```
