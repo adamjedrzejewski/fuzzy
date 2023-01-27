@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"fuzzy/lib"
 	"os"
 	"strconv"
-	"fuzzy/lib"
+	"time"
 )
 
 func main() {
@@ -41,4 +41,3 @@ func main() {
 
 	fmt.Println(time)
 }
-

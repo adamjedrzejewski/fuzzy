@@ -32,22 +32,22 @@ func SayTime(hour, minute int) (string, error) {
 		return fmt.Sprintf("half past past %s", sayHour(hour)), nil
 	}
 	if minute < 38 {
-		return fmt.Sprintf("twenty five to %s", sayHour(hour + 1)), nil;
+		return fmt.Sprintf("twenty five to %s", sayHour(hour+1)), nil
 	}
 	if minute < 43 {
-		return fmt.Sprintf("twenty to %s", sayHour(hour + 1)), nil;
+		return fmt.Sprintf("twenty to %s", sayHour(hour+1)), nil
 	}
 	if minute < 48 {
-		return fmt.Sprintf("quarter to %s", sayHour(hour + 1)), nil;
+		return fmt.Sprintf("quarter to %s", sayHour(hour+1)), nil
 	}
 	if minute < 53 {
-		return fmt.Sprintf("ten to %s", sayHour(hour + 1)), nil;
+		return fmt.Sprintf("ten to %s", sayHour(hour+1)), nil
 	}
 	if minute < 58 {
-		return fmt.Sprintf("five to %s", sayHour(hour + 1)), nil;
+		return fmt.Sprintf("five to %s", sayHour(hour+1)), nil
 	}
 
-	return fmt.Sprintf("%s o'clock", sayHour(hour + 1)), nil;
+	return fmt.Sprintf("%s o'clock", sayHour(hour+1)), nil
 }
 
 func sayHour(hour int) string {
